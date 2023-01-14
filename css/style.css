@@ -16,13 +16,15 @@ body {
 }
 main {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .container {
   background-color: #ffffff;
   border-radius: 5px;
   width: 870px;
   padding: 30px;
+  margin-top: 21px;
 }
 .section-title {
   font-size: 24px;
@@ -43,6 +45,8 @@ main {
 .player > img {
   width: 56px;
   height: 56px;
+  grid-column-gap: ;
+  grid-gap: ;
 }
 .player-name {
   margin-left: 16px;
@@ -84,4 +88,99 @@ hr {
 .blog-author a {
   text-decoration: none;
   color: #562eff;
+}
+
+/* ------------------------ 
+        course styles
+--------------------------  */
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 24px;
+}
+.course {
+  /* height: 269.79px; */
+  width: 252.42px;
+
+  border: 1px solid #ffffff;
+  padding: 10px;
+  filter: drop-shadow(0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+}
+.course-banner > img {
+  width: 224px;
+  height: 104px;
+}
+.course-title {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #1e1e1e;
+  margin-bottom: 8px;
+}
+.course-author a {
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14.6913px;
+  color: #ed6b4f;
+}
+.course-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+.fa-star {
+  font-size: 12px;
+}
+.fa-star.field {
+  color: #ffc014;
+}
+.fa-star.empty {
+  color: #aeaeae;
+}
+.point span {
+  color: #a2a2a2;
+}
+.course-duration {
+  background: #ffe4e8;
+  border-radius: 14.6913px;
+}
+.course-duration i,
+span {
+  color: #ff4a60;
+  padding: 5px;
+}
+/* media quray  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .players,
+  .blogs,
+  .courses {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .blog {
+    flex-direction: column;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 601px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container{
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
 }
